@@ -4,40 +4,35 @@ namespace ThePicturesOfChaos
 {
     public class SystemGenerator
     {
-        public struct Rule
+        private readonly Rule[] rules;
+
+        public SystemGenerator(Rule[] rules)
         {
-            public Rule(string a, string b)
-            {
-                A = a;
-                B = b;
-            }
-
-            public string A { get; }
-
-            public string B { get; }
+            this.rules = rules;
         }
-
-        private readonly Rule[] _rules;
-
-        public SystemGenerator(Rule[] rules) => _rules = rules;
 
         public string Generate(string axiom)
         {
-            var buffer = "";
-            for (var currentIndex = 0; currentIndex < axiom.Length; currentIndex++)
+            string buffer = string.Empty;
+
+            for (int currentIndex = 0; currentIndex < axiom.Length; currentIndex++)
             {
-                var found = false;
-                var currentChar = axiom.ElementAt(currentIndex).ToString();
-                foreach (var rule in _rules)
+                bool found = false;
+                string currentChar = axiom.ElementAt(currentIndex).ToString();
+                foreach (var rule in rules)
+                {
                     if (currentChar == rule.A)
                     {
                         found = true;
                         buffer += rule.B;
                         break;
                     }
+                }
 
                 if (!found)
+                {
                     buffer += currentChar;
+                }
             }
 
             axiom = buffer;

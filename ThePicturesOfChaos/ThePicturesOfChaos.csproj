@@ -8,9 +8,10 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>ThePicturesOfChaos</RootNamespace>
     <AssemblyName>ThePicturesOfChaos</AssemblyName>
-    <TargetFrameworkVersion>v4.6.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -48,6 +49,14 @@
     <Compile Include="CustomColorDialog.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Fractals\Ancient.cs" />
+    <Compile Include="Fractals\Bush.cs" />
+    <Compile Include="Fractals\Fractal.cs" />
+    <Compile Include="Fractals\GosperCurve.cs" />
+    <Compile Include="Fractals\LeviCurve.cs" />
+    <Compile Include="Fractals\Reed.cs" />
+    <Compile Include="Fractals\Snowflake.cs" />
+    <Compile Include="Fractals\Tree.cs" />
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -57,17 +66,18 @@
     <Compile Include="LastInformation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="FractalsFactory.cs">
+    <Compile Include="FractalDrawingControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="FractalsFactory.Designer.cs">
-      <DependentUpon>FractalsFactory.cs</DependentUpon>
+    <Compile Include="FractalDrawingControl.Designer.cs">
+      <DependentUpon>FractalDrawingControl.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Rule.cs" />
     <Compile Include="SystemGenerator.cs" />
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -77,8 +87,8 @@
       <SubType>Designer</SubType>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="FractalsFactory.resx">
-      <DependentUpon>FractalsFactory.cs</DependentUpon>
+    <EmbeddedResource Include="FractalDrawingControl.resx">
+      <DependentUpon>FractalDrawingControl.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

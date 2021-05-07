@@ -1,6 +1,6 @@
 ﻿namespace ThePicturesOfChaos
 {
-    partial class FractalsFactory
+    partial class FractalDrawingControl
     {
         /// <summary> 
         /// Required designer variable.
@@ -71,7 +71,7 @@
             this.btnSave.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(123)))), ((int)(((byte)(117)))));
             this.btnSave.FlatAppearance.BorderSize = 0;
             this.btnSave.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnSave.Font = new System.Drawing.Font("Kozuka Gothic Pro R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnSave.ForeColor = System.Drawing.Color.Linen;
             this.btnSave.Location = new System.Drawing.Point(36, 1);
             this.btnSave.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
@@ -85,10 +85,10 @@
             // lbLineLength
             // 
             this.lbLineLength.AutoSize = true;
-            this.lbLineLength.Font = new System.Drawing.Font("Kozuka Gothic Pro R", 11F);
+            this.lbLineLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lbLineLength.Location = new System.Drawing.Point(782, 6);
             this.lbLineLength.Name = "lbLineLength";
-            this.lbLineLength.Size = new System.Drawing.Size(88, 20);
+            this.lbLineLength.Size = new System.Drawing.Size(82, 18);
             this.lbLineLength.TabIndex = 10;
             this.lbLineLength.Text = "Line length:";
             // 
@@ -100,7 +100,7 @@
             this.nUpDLineLength.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.nUpDLineLength.Location = new System.Drawing.Point(863, 7);
             this.nUpDLineLength.Maximum = new decimal(new int[] {
-            11,
+            9999,
             0,
             0,
             0});
@@ -120,30 +120,30 @@
             0,
             0,
             0});
-            this.nUpDLineLength.ValueChanged += new System.EventHandler(this.nUpDLineLength_ValueChanged);
+            this.nUpDLineLength.ValueChanged += new System.EventHandler(this.LineLengthValueChanged);
             // 
             // cbFitFractal
             // 
             this.cbFitFractal.AutoSize = true;
             this.cbFitFractal.Checked = true;
             this.cbFitFractal.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbFitFractal.Font = new System.Drawing.Font("Kozuka Gothic Pro R", 11F);
+            this.cbFitFractal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.cbFitFractal.Location = new System.Drawing.Point(926, 5);
             this.cbFitFractal.Name = "cbFitFractal";
             this.cbFitFractal.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.cbFitFractal.Size = new System.Drawing.Size(93, 24);
+            this.cbFitFractal.Size = new System.Drawing.Size(91, 22);
             this.cbFitFractal.TabIndex = 8;
             this.cbFitFractal.Text = "Fit  fractal";
             this.cbFitFractal.UseVisualStyleBackColor = true;
-            this.cbFitFractal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.cbFitFractal_MouseClick);
+            this.cbFitFractal.MouseClick += new System.Windows.Forms.MouseEventHandler(this.OnFitFractalMouseClicked);
             // 
             // lbLineWidth
             // 
             this.lbLineWidth.AutoSize = true;
-            this.lbLineWidth.Font = new System.Drawing.Font("Kozuka Gothic Pro R", 11F);
+            this.lbLineWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
             this.lbLineWidth.Location = new System.Drawing.Point(643, 5);
             this.lbLineWidth.Name = "lbLineWidth";
-            this.lbLineWidth.Size = new System.Drawing.Size(83, 20);
+            this.lbLineWidth.Size = new System.Drawing.Size(77, 18);
             this.lbLineWidth.TabIndex = 7;
             this.lbLineWidth.Text = "Line width:";
             // 
@@ -180,7 +180,7 @@
             this.btnResetFractal.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(123)))), ((int)(((byte)(117)))));
             this.btnResetFractal.FlatAppearance.BorderSize = 0;
             this.btnResetFractal.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnResetFractal.Font = new System.Drawing.Font("Kozuka Gothic Pro R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnResetFractal.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnResetFractal.ForeColor = System.Drawing.Color.Linen;
             this.btnResetFractal.Location = new System.Drawing.Point(353, 1);
             this.btnResetFractal.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
@@ -195,7 +195,7 @@
             this.btnLineColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(123)))), ((int)(((byte)(117)))));
             this.btnLineColor.FlatAppearance.BorderSize = 0;
             this.btnLineColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnLineColor.Font = new System.Drawing.Font("Kozuka Gothic Pro R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnLineColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnLineColor.ForeColor = System.Drawing.Color.Linen;
             this.btnLineColor.Location = new System.Drawing.Point(515, 1);
             this.btnLineColor.Margin = new System.Windows.Forms.Padding(25, 0, 3, 3);
@@ -210,7 +210,7 @@
             this.btnBackgroundColor.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(123)))), ((int)(((byte)(117)))));
             this.btnBackgroundColor.FlatAppearance.BorderSize = 0;
             this.btnBackgroundColor.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnBackgroundColor.Font = new System.Drawing.Font("Kozuka Gothic Pro R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnBackgroundColor.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnBackgroundColor.ForeColor = System.Drawing.Color.Linen;
             this.btnBackgroundColor.Location = new System.Drawing.Point(102, 1);
             this.btnBackgroundColor.Margin = new System.Windows.Forms.Padding(3, 0, 25, 3);
@@ -225,7 +225,7 @@
             this.btnNextIteration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(140)))), ((int)(((byte)(123)))), ((int)(((byte)(117)))));
             this.btnNextIteration.FlatAppearance.BorderSize = 0;
             this.btnNextIteration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnNextIteration.Font = new System.Drawing.Font("Kozuka Gothic Pro R", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
+            this.btnNextIteration.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(128)));
             this.btnNextIteration.ForeColor = System.Drawing.Color.Linen;
             this.btnNextIteration.Location = new System.Drawing.Point(241, 1);
             this.btnNextIteration.Margin = new System.Windows.Forms.Padding(3, 0, 3, 3);
@@ -243,14 +243,14 @@
             this.pbFractalSpace.TabIndex = 1;
             this.pbFractalSpace.TabStop = false;
             // 
-            // FractalsFactory
+            // FractalDrawingControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(215)))), ((int)(((byte)(204)))), ((int)(((byte)(200)))));
             this.Controls.Add(this.pbFractalSpace);
             this.Controls.Add(this.pnProperties);
-            this.Name = "FractalsFactory";
+            this.Name = "FractalDrawingControl";
             this.Size = new System.Drawing.Size(1053, 682);
             this.pnProperties.ResumeLayout(false);
             this.pnProperties.PerformLayout();
